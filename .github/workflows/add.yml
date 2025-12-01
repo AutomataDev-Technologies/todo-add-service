@@ -26,6 +26,6 @@ jobs:
       - name: acr login
         run: az acr login --name todoaksacrspsingh
       - name: tag to acr
-        run: docker tag $image_name:$image_version $todoaksacrspsingh.azurecr.io/$image_name:$image_version        
+        run: docker tag $image_name:$image_version $acr_login_server/$image_name:$image_version        
       - name: push to acr
-        run: docker push $todoaksacrspsingh.azurecr.io/$image_name:$image_version
+        run: docker push $acr_login_server/$image_name:$image_version
